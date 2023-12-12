@@ -20,7 +20,7 @@ Users should be able to:
 
 - Choose their desired game.
 - Play the game.
-- See their result at the game.
+- See their score after playing the game.
 
 ### Built with
 
