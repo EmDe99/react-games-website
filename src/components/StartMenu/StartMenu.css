@@ -1,23 +1,9 @@
-
-.App {
-  height: 100%;
-}
-
-#wrapper{
-  display: flex;
-  flex-direction:column;
-  text-align: center;
-  height: 100%;
-  background-color: #9fa4ba;
-  overflow: auto;
-}
-
 h1 {
   font-size: 3em;
   margin-bottom: 0;
 }
 
-#menuP {
+p {
   font-size: 1.1em;
 }
 
@@ -27,7 +13,6 @@ h1 {
 
 .menubuttons a{
   display: block;
-  margin: 1em;
   margin-left: auto;
   margin-right: auto;
   padding: 1.35em 1.1em;
@@ -46,4 +31,10 @@ h1 {
 .menubuttons a:hover{
   background: #c94e50;
   color: #ffffff;
+}
+
+link {
+  color: #000000;
+  height: 1em;
+  text-decoration: dashed;
 }

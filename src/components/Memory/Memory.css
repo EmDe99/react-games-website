@@ -1,0 +1,43 @@
+#game-area {
+  margin: auto auto 0 auto;
+  background-color: antiquewhite;
+  border: 3px solid black;
+  height: 60%;
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  pointer-events: none;
+  pointer-events: all;
+  }
+
+.card {
+  background-image: url(../../assets/memory/Question.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 10%;
+  box-sizing: border-box;
+  border: 0.1px solid black;
+}
+
+.card p {
+  opacity: 100;
+  color: red;
+}
+
+.card.flipped{
+  background: none;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+#pScore {
+  font-size: 1.5em;
+}
+
+#tScore {
+  font-size: 1.5em;
+  margin-bottom: 4em;
+}
