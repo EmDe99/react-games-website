@@ -1,6 +1,6 @@
 import "./Memory.css";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+
 function Memory() {
     const pairs = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
     const [lastCard, setLastCard] = useState([]);
@@ -20,23 +20,6 @@ function Memory() {
         randomize(cards)
         setCardsStatus(cards);
       }
-
-    function randomize(cards){
-      //Fisher-Yates Shuffle
-      let currentIndex = cards.length, temporaryValue, randomIndex;
-
-      while (0 !== currentIndex) {
-    
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-    
-        temporaryValue = cards[currentIndex];
-        cards[currentIndex] = cards[randomIndex];
-        cards[randomIndex] = temporaryValue;
-      }
-    
-      return cards;
-    }
     
     function gameLogic(cardKey) {
         const clickedCard = cards.find(card => card.key === cardKey);
@@ -59,7 +42,7 @@ function Memory() {
             if (lastCard.value === clickedCard.value){
                 const matchedCards = cards.map(card => {
                     if (card.key === cardKey || card.key === lastCard.key) {
-                      return { ...card, state: 'matched' };
+                      return { ...card, state: 'matched', pointerEvents : 'none'};
                     } else {
                       return card;
                     }
@@ -69,6 +52,7 @@ function Memory() {
                   setTurnScore(turnScore + 1)
                   setLastCard([])
             } else {
+
             const flippedCards = cards.map(card => {
               if (card.key === cardKey || card.key === lastCard.key) {
                 return { ...card, state: 'flipped' };
@@ -93,6 +77,10 @@ function Memory() {
             }, 1000); 
           }   
         } 
+
+        if (score === 8){
+          setGameAreaStyle({pointerEvents: 'none'})
+        }
     }
 
     return (
@@ -100,7 +88,7 @@ function Memory() {
           <div id="game-area" style={gameAreaStyle}>
               {cards.map((card) => (
                   <div
-                      className={`card ${card.state === 'flipped' || card.state === 'matched' ? 'flipped' : ''}`}
+                      className={`card ${card.state === 'flipped' ? "flipped" : card.state === 'matched' ? 'flipped' : ''}`}
                       key={card.key}
                       onClick={() => gameLogic(card.key)}
                   >
@@ -109,7 +97,6 @@ function Memory() {
               ))}
               </div>
               <div>
-                  <p id="pScore">Your current score is {score}!</p>
                   <p id="tScore">You have attempted {turnScore} times!</p>
               </div>
             </>
@@ -118,3 +105,20 @@ function Memory() {
 }
 
 export default Memory;
+
+function randomize(cards){
+  //Fisher-Yates Shuffle
+  let currentIndex = cards.length, temporaryValue, randomIndex;
+
+  while (0 !== currentIndex) {
+
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    temporaryValue = cards[currentIndex];
+    cards[currentIndex] = cards[randomIndex];
+    cards[randomIndex] = temporaryValue;
+  }
+
+  return cards;
+}

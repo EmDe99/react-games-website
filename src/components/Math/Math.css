@@ -1,0 +1,35 @@
+#overlay {
+    width:60%;
+    height: 60%;
+    margin: auto;
+    z-index: 1;
+    inset: 0;
+}
+
+#pre-game {
+    background-color: white;
+    padding-bottom: 1em;
+    border-radius: 2%/50%;
+}
+
+#about-text {
+    padding: 1em;
+}
+
+#math-game-area {
+    background-color: rgb(255, 255, 255);
+    margin: auto auto 0 auto;
+    height: 100%;
+    z-index: 2;
+    position: relative;
+    display: none;
+    border-radius: 2%/50%;    
+}
+
+input {
+    text-align: center;
+}
+
+#timer {
+    display: none;
+}
