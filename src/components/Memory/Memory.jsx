@@ -85,6 +85,9 @@ function Memory() {
 
     return (
         <>
+        <div id="about-text"> 
+                <p>Find the matching card numbers!</p>
+            </div>
           <div id="game-area" style={gameAreaStyle}>
               {cards.map((card) => (
                   <div

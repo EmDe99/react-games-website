@@ -20,12 +20,18 @@
 
 .card p {
   opacity: 100;
-  color: red;
+  font-size: 4vh;
+  color: rgb(0, 0, 0);
+  text-align: center;
 }
 
 .card.flipped{
   background: none;
   pointer-events: none;
+}
+
+.card:hover {
+  cursor: pointer;
 }
 
 .hidden {
