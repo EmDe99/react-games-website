@@ -8,6 +8,14 @@ import fra from '../../assets/countries/france.svg';
 import pol from '../../assets/countries/poland.svg';
 import irq from '../../assets/countries/iraq.svg';
 import jpn from '../../assets/countries/japan.svg';
+import aus from '../../assets/countries/australia.svg';
+import can from '../../assets/countries/canada.svg';
+import den from '../../assets/countries/denmark.svg';
+import ger from '../../assets/countries/germany.svg';
+import gre from '../../assets/countries/greece.svg';
+import ita from '../../assets/countries/italy.svg';
+import bra from '../../assets/countries/brazil.svg';
+import usa from '../../assets/countries/usa.svg';
 import hrt from '../../assets/hearts/heart.svg';
 
 function Guesser() {
@@ -20,9 +28,9 @@ function Guesser() {
     let [guessedCountries, setGuessedCountries] = useState([]);
     let [lives, setLives] = useState(3);
     const click = useRef(null);
-    const countries = [{name: "Sweden", svg: swe, guessed: 0}, {name: "Norway", svg: nor, guessed: 0}, {name: "Finland", svg: fin, guessed: 0}, 
-                       {name: "France", svg: fra, guessed: 0}, {name: "Poland", svg: pol, guessed: 0}, {name: "Iraq", svg: irq, guessed: 0}, 
-                       {name: "Japan", svg: jpn, guessed: 0}];
+    const countries = [{name: "Sweden", svg: swe}, {name: "Norway", svg: nor}, {name: "Finland", svg: fin}, {name: "France", svg: fra}, {name: "Poland", svg: pol}, 
+                       {name: "Iraq", svg: irq}, {name: "Japan", svg: jpn}, {name: "Australia", svg: aus}, {name: "Canada", svg: can}, {name: "Denmark", svg: den}, 
+                       {name: "Germany", svg: ger}, {name: "Greece", svg: gre}, {name: "Italy", svg: ita}, {name: "Brazil", svg: bra}, {name: "USA", svg: usa}];
     let newCountry;
     let currentCountry;
 
@@ -107,7 +115,7 @@ function Guesser() {
             <div className='start-area' style={startStyle}>
                 <h1 id="guess-h1">Guess The Country</h1>
                 <p id='instructions-text'>Guess the country by typing in the name of the country in the input field and clicking the guess button. 
-                A correct guess earns you 1 point, while an incorrect one results in a deduction of 1 point. There is 30 countries to guess and you have a total of 3 lives.  Good luck!
+                                          There is 15 countries to guess and you have a total of 3 lives.  Good luck!
                     <br /><br />Thanks to djaiss for the making the country SVGs!
                 </p>
                 <button id="start-button" onClick={startGame}>Start</button>
