@@ -1,54 +1,87 @@
 import './Guesser.css';
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import swe from '../../assets/countries/sweden.svg';
 import nor from '../../assets/countries/norway.svg';
 import fin from '../../assets/countries/finland.svg';
 import fra from '../../assets/countries/france.svg';
 import pol from '../../assets/countries/poland.svg';
-
-
+import irq from '../../assets/countries/iraq.svg';
+import jpn from '../../assets/countries/japan.svg';
+import hrt from '../../assets/hearts/heart.svg';
 
 function Guesser() {
     let [country, setCountry] = useState();
     let [guess, setGuess] = useState(); 
     let [score, setScore] = useState(0);
-    let [guessed, setGuessed] = useState();
+    let [currentCountryIndex, setCurrentCountryIndex] = useState();
     let [startStyle, setStartStyle] = useState({display: 'flex'});
     let [guessAreaStyle, setGuessAreaStyle] = useState({display: 'none'});
-    const countries = [{name: "Sweden", svg: swe, guessed: 0}, {name: "Norway", svg: nor, guessed: 0}, {name: "Finland", svg: fin, guessed: 0}, {name: "France", svg: fra, guessed: 0}, {name: "Poland", svg: pol, guessed: 0}];
+    let [guessedCountries, setGuessedCountries] = useState([]);
+    let [lives, setLives] = useState(3);
+    const click = useRef(null);
+    const countries = [{name: "Sweden", svg: swe, guessed: 0}, {name: "Norway", svg: nor, guessed: 0}, {name: "Finland", svg: fin, guessed: 0}, 
+                       {name: "France", svg: fra, guessed: 0}, {name: "Poland", svg: pol, guessed: 0}, {name: "Iraq", svg: irq, guessed: 0}, 
+                       {name: "Japan", svg: jpn, guessed: 0}];
     let newCountry;
     let currentCountry;
 
+
     useEffect(() => {
-        currentCountry = Math.floor(Math.random() * countries.length);
-        setCountry(countries[currentCountry]);
-    }, [])
+        let randomIndex = Math.floor(Math.random() * countries.length);
+        setCurrentCountryIndex(randomIndex);
+        setCountry(countries[randomIndex]);
+    }, []);
 
     const handleGuessInput = (event) => {
         setGuess(event.target.value); 
     }
 
     function guessLogic() {
+        if (guess === undefined){
+            alert("You need to guess a country!")
+            return
+        }
         guess = guess.toLowerCase();
         let cName = country.name.toLowerCase();
-        console.log(guess);
-        console.log(cName);
 
         if (guess === cName) {
             setScore(score + 1);
+            if (guessedCountries.length === countries.length - 1) {
+                alert("You have guessed all the countries!");
+                setGuessAreaStyle({display: 'none'});
+                setStartStyle({display: 'flex'});
+                setGuessedCountries([]);
+                setLives(3)
+                setScore(0);
+                return;
+            }
             generateRandomCountry();
         } else {
-            setScore(score - 1);
+            setLives(lives - 1);
+
+            if (lives < 2) {
+                alert("You have no more lives! Try again!");
+                setGuessAreaStyle({display: 'none'});
+                setStartStyle({display: 'flex'});
+                setGuessedCountries([]);
+                setLives(3)
+                setScore(0);
+                return;
+            }
         }
     }
 
 
     function generateRandomCountry() {
+        setGuessedCountries([...guessedCountries, {id: currentCountryIndex}]);
+        console.log(currentCountryIndex);
+        console.log(guessedCountries);
+
         do {
             newCountry = Math.floor(Math.random() * countries.length);
-        } while (newCountry === currentCountry);
-        
+        } while (newCountry === currentCountryIndex || guessedCountries.some((country) => country.id === newCountry));
+        setCurrentCountryIndex(newCountry);
         setCountry(countries[newCountry]);
     }
 
@@ -61,17 +94,23 @@ function Guesser() {
         <div className="guesser">
             <div className="guess-area" style={guessAreaStyle}>
                 <h1 >Guess the country</h1>
-                <h2>Score: {score}</h2>
+                <h2>Country: {score}/{countries.length - 1}</h2>
                 {country && <img id="svg" src={country.svg} alt={country.name} />}
-                <input type="text" id="guess-input" placeholder="Guess the country" onChange={handleGuessInput}/>
-                <button id="guess-button" onClick={() => guessLogic()}>Guess</button>
+                <div id="heart-container">
+                {Array.from({length: lives }, (_, i) => (
+                    <img key={i} id="heart" src={hrt} alt="heart" />
+                ))}
+                </div>
+                <input type="text" id="guess-input" placeholder="Guess the country" onChange={handleGuessInput} ref={click} />
+                <button id="guess-button" onClick={guessLogic}>Guess</button>
             </div>
             <div className='start-area' style={startStyle}>
-                <h1 id="guess-h1">Guess The Country Instructions</h1>
-                <p id='instructions-text'>Guess the country by typing in the name of the country in the input field and clicking the guess button. If you guess correctly, you will get 1 point. If you guess incorrectly, you will lose 1 point. You can only guess each country once. Good luck!
-                <br /><br />Thanks to djaiss for the making the country SVGs!
-</p>
-                <button id="start-button" onClick={() => startGame()}>Start</button>
+                <h1 id="guess-h1">Guess The Country</h1>
+                <p id='instructions-text'>Guess the country by typing in the name of the country in the input field and clicking the guess button. 
+                A correct guess earns you 1 point, while an incorrect one results in a deduction of 1 point. There is 30 countries to guess and you have a total of 3 lives.  Good luck!
+                    <br /><br />Thanks to djaiss for the making the country SVGs!
+                </p>
+                <button id="start-button" onClick={startGame}>Start</button>
             </div>
         </div>
       

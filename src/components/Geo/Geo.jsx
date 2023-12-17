@@ -33,7 +33,7 @@ function Geo() {
       
 
 
-    function gameLogic(cardIdentifier, source) {
+    function gameLogic(cardIdentifier) {
         let hlCard;
 
         if (highlightedCard.length < 1){
@@ -89,7 +89,7 @@ function Geo() {
                 if (card.value != null) {
                     return (
                         <div
-                            onClick={() => gameLogic(card.value, 0)}
+                            onClick={() => gameLogic(card.value)}
                             className={`cards ${card.state === 'highlighted' ? 'highlighted' : card.state === 'matched' ? 'matched' : ''}`}>
                             <p>{card.value}</p>
                         </div>
@@ -100,7 +100,7 @@ function Geo() {
                 if (card.key != null) {
                     return (
                         <div
-                            onClick={() => gameLogic(card.key, 1)}
+                            onClick={() => gameLogic(card.key)}
                             className={`cards ${card.state === 'highlighted' ? 'highlighted' : card.state === 'matched' ? 'matched' : ''}`}>
                             <p>{card.key}</p>
                         </div>

@@ -12,7 +12,7 @@
 .cards {
   box-sizing: border-box;
   border: 0.1px solid black;
-
+  cursor: pointer;
 }
 
 .cards p{

@@ -15,6 +15,7 @@ function MathGame() {
     const [attempts, setAttempts] = useState(0);
     const [scoreText, setScoreText] = useState({});
     const [timeText, setTimeText] = useState({});
+    const [cardStyle, setCardStyle] = useState();
     let answer;
 
     useEffect(() => {
@@ -83,6 +84,7 @@ function MathGame() {
         console.log(mathAnswer)
         
         if (value === mathAnswer) {
+            // TODO: Show the user if their answer is correct or not 
             setMathScore(mathScore + 1);
         } 
         setAttempts(attempts + 1);
@@ -113,6 +115,7 @@ function MathGame() {
                         return ( 
                         <div onClick={() => gameLogic(option.value)}
                              className="mathOptions">
+                             style={}   
                                 <p>{option.value}</p>
                          </div>
                         )

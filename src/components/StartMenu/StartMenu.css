@@ -7,6 +7,12 @@ p {
   font-size: 1.1em;
 }
 
+#line-break {
+  width: 65%;
+  border-bottom: 1px black solid;
+  margin: auto;
+}
+
 .menubuttons {
   margin-top: 2em;
 }
