@@ -55,7 +55,7 @@ function Guesser() {
 
         if (guess === cName) {
             setScore(score + 1);
-            if (guessedCountries.length === countries.length - 1) {
+            if (guessedCountries.length === countries.length) {
                 alert("You have guessed all the countries!");
                 setGuessAreaStyle({display: 'none'});
                 setStartStyle({display: 'flex'});
@@ -102,7 +102,7 @@ function Guesser() {
         <div className="guesser">
             <div className="guess-area" style={guessAreaStyle}>
                 <h1 >Guess the country</h1>
-                <h2>Country: {score}/{countries.length - 1}</h2>
+                <h2>Country: {score}/{countries.length}</h2>
                 {country && <img id="svg" src={country.svg} alt={country.name} />}
                 <div id="heart-container">
                 {Array.from({length: lives }, (_, i) => (
