@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <div id="wrapper">
-        <Router basename="/react-games"> {"/react-games-website"}
+        <Router basename="/react-games-website"> 
           <Nav />
           <Routes>
             <Route path="/" element={<StartMenu />} />
