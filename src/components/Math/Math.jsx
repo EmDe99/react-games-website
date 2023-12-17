@@ -114,8 +114,7 @@ function MathGame() {
                     {mathOptions.map((option)=> {
                         return ( 
                         <div onClick={() => gameLogic(option.value)}
-                             className="mathOptions">
-                             style={}   
+                             className="mathOptions"> 
                                 <p>{option.value}</p>
                          </div>
                         )
