@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/react-games-website/static/css/main.76c09a3c.css",
-    "main.js": "/react-games-website/static/js/main.fadfcd1f.js",
-    "static/media/Question.png": "/react-games-website/static/media/Question.046e855ef9b8c04cc244.png",
-    "static/media/norway.svg": "/react-games-website/static/media/norway.58f5a059f860c8fcddd68b75bed56edc.svg",
-    "static/media/japan.svg": "/react-games-website/static/media/japan.8904a616c66e83525e0201d1a67deb57.svg",
-    "static/media/france.svg": "/react-games-website/static/media/france.495849f735fbde9ebbb02def62c3a93b.svg",
-    "static/media/sweden.svg": "/react-games-website/static/media/sweden.e99347afb088af4906e9de3cf9ad276d.svg",
-    "static/media/poland.svg": "/react-games-website/static/media/poland.f4d4f6d6ca9ad0502fa1c358f978a0a7.svg",
-    "static/media/finland.svg": "/react-games-website/static/media/finland.33a285e58faa314902cf76325983bb00.svg",
-    "static/media/iraq.svg": "/react-games-website/static/media/iraq.b0838848fcc441d560e7fda4b7aa5e45.svg",
-    "index.html": "/react-games-website/index.html",
-    "static/media/heart.svg": "/react-games-website/static/media/heart.1fe166371b8fc1068cb50ce0fe588aa7.svg",
-    "main.76c09a3c.css.map": "/react-games-website/static/css/main.76c09a3c.css.map",
-    "main.fadfcd1f.js.map": "/react-games-website/static/js/main.fadfcd1f.js.map"
+    "main.css": "/react-games-website/home/static/css/main.d0f14497.css",
+    "main.js": "/react-games-website/home/static/js/main.5c89df83.js",
+    "static/media/Question.png": "/react-games-website/home/static/media/Question.046e855ef9b8c04cc244.png",
+    "static/media/norway.svg": "/react-games-website/home/static/media/norway.58f5a059f860c8fcddd68b75bed56edc.svg",
+    "static/media/japan.svg": "/react-games-website/home/static/media/japan.8904a616c66e83525e0201d1a67deb57.svg",
+    "static/media/france.svg": "/react-games-website/home/static/media/france.495849f735fbde9ebbb02def62c3a93b.svg",
+    "static/media/sweden.svg": "/react-games-website/home/static/media/sweden.e99347afb088af4906e9de3cf9ad276d.svg",
+    "static/media/poland.svg": "/react-games-website/home/static/media/poland.f4d4f6d6ca9ad0502fa1c358f978a0a7.svg",
+    "static/media/finland.svg": "/react-games-website/home/static/media/finland.33a285e58faa314902cf76325983bb00.svg",
+    "static/media/iraq.svg": "/react-games-website/home/static/media/iraq.b0838848fcc441d560e7fda4b7aa5e45.svg",
+    "index.html": "/react-games-website/home/index.html",
+    "static/media/heart.svg": "/react-games-website/home/static/media/heart.1fe166371b8fc1068cb50ce0fe588aa7.svg",
+    "main.d0f14497.css.map": "/react-games-website/home/static/css/main.d0f14497.css.map",
+    "main.5c89df83.js.map": "/react-games-website/home/static/js/main.5c89df83.js.map"
   },
   "entrypoints": [
-    "static/css/main.76c09a3c.css",
-    "static/js/main.fadfcd1f.js"
+    "static/css/main.d0f14497.css",
+    "static/js/main.5c89df83.js"
   ]
 }
