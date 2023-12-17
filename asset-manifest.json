@@ -1,22 +1,30 @@
 {
   "files": {
     "main.css": "/react-games-website/static/css/main.76c09a3c.css",
-    "main.js": "/react-games-website/static/js/main.51db8d11.js",
+    "main.js": "/react-games-website/static/js/main.424ba421.js",
     "static/media/Question.png": "/react-games-website/static/media/Question.046e855ef9b8c04cc244.png",
+    "static/media/greece.svg": "/react-games-website/static/media/greece.259df5768e777a5ef119d3abf36a247e.svg",
+    "static/media/canada.svg": "/react-games-website/static/media/canada.f52bc71e9801b0e9a917aaa6b0bbd6e9.svg",
+    "static/media/denmark.svg": "/react-games-website/static/media/denmark.8aabb502146112f96483ec45d29128ba.svg",
     "static/media/norway.svg": "/react-games-website/static/media/norway.58f5a059f860c8fcddd68b75bed56edc.svg",
     "static/media/japan.svg": "/react-games-website/static/media/japan.8904a616c66e83525e0201d1a67deb57.svg",
+    "static/media/germany.svg": "/react-games-website/static/media/germany.82a867755a7942c6156531138dcbb7fd.svg",
+    "static/media/italy.svg": "/react-games-website/static/media/italy.e3cbe0aa101086a14cb1d490ddc24962.svg",
     "static/media/france.svg": "/react-games-website/static/media/france.495849f735fbde9ebbb02def62c3a93b.svg",
     "static/media/sweden.svg": "/react-games-website/static/media/sweden.e99347afb088af4906e9de3cf9ad276d.svg",
+    "static/media/australia.svg": "/react-games-website/static/media/australia.7e9a9c28eca10628fedf4ca0b1c387b1.svg",
+    "static/media/usa.svg": "/react-games-website/static/media/usa.25b901652bfee5cff8d92bea17cd5173.svg",
     "static/media/poland.svg": "/react-games-website/static/media/poland.f4d4f6d6ca9ad0502fa1c358f978a0a7.svg",
     "static/media/finland.svg": "/react-games-website/static/media/finland.33a285e58faa314902cf76325983bb00.svg",
+    "static/media/brazil.svg": "/react-games-website/static/media/brazil.03bbeae4956ab0206af9636ceebf7fc0.svg",
     "static/media/iraq.svg": "/react-games-website/static/media/iraq.b0838848fcc441d560e7fda4b7aa5e45.svg",
     "index.html": "/react-games-website/index.html",
     "static/media/heart.svg": "/react-games-website/static/media/heart.1fe166371b8fc1068cb50ce0fe588aa7.svg",
     "main.76c09a3c.css.map": "/react-games-website/static/css/main.76c09a3c.css.map",
-    "main.51db8d11.js.map": "/react-games-website/static/js/main.51db8d11.js.map"
+    "main.424ba421.js.map": "/react-games-website/static/js/main.424ba421.js.map"
   },
   "entrypoints": [
     "static/css/main.76c09a3c.css",
-    "static/js/main.51db8d11.js"
+    "static/js/main.424ba421.js"
   ]
 }
