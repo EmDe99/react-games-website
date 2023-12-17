@@ -11,20 +11,20 @@ import StartMenu from './components/StartMenu/StartMenu.jsx';
 
 function App() {
   return (
-      <div className="App">
-        <div id="wrapper">
-          <Router>
-            <Nav />
-            <Routes>
-              <Route path="/" element={<StartMenu />} />
-              <Route path="/Memory" element={<Memory />} />
-              <Route path="/Geo" element={<Geo />} />
-              <Route path="/Math" element={<Math />} />
-              <Route path="/Guesser" element={<Random />} />
-            </Routes>
-          </Router>
-        </div>
-     </div>
+    <div className="App">
+      <div id="wrapper">
+        <Router basename="/react-games"> {"/react-games"}
+          <Nav />
+          <Routes>
+            <Route path="/" element={<StartMenu />} />
+            <Route path="/Memory" element={<Memory />} />
+            <Route path="/Geo" element={<Geo />} />
+            <Route path="/Math" element={<Math />} />
+            <Route path="/Guesser" element={<Random />} />
+          </Routes>
+        </Router>
+      </div>
+    </div>
   );
 }
 
