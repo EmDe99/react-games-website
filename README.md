@@ -2,14 +2,6 @@
 
 A website filled with a few different fun games.
 
-## Table of contents
-
-  - [Overview](#overview)
-  - [The goal](#the-goal)
-  - [Built with](#built-with)
-  - [TODO](#TODO)
-  - [What I learned](#what-i-learned)
-
 ## Overview
 
 In this project, I created a games website using React. It was a good exercise to familiarize myself with many different aspects of React, such as routing and states.
